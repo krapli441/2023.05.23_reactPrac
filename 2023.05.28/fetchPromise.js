@@ -22,4 +22,10 @@ fetch("https://api.randomuser.me/?nat=US&result=1")
   .then(console.log)
   .catch(console.error);
 
-  // then 함수를 적을 때 세미콜론에 유의하자.
+// fetch를 호출해 randomuser.me에 대한 GET 요청을 보낸다.
+// 요청이 성공하면, 응답 본문을 JSON으로 변환한다.
+// 그 후 JSON 데이터 중에서 results를 얻는다.
+// 콘솔에 results의 값을 출력한다.
+// 만약 fetch가 성공하지 못한 경우 catch 함수를 이용해 오류 메세지를 출력한다.
+
+// then 함수를 적을 때 세미콜론에 유의하자.
