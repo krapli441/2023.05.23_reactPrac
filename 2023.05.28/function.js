@@ -36,11 +36,11 @@
 //   console.log("hey."); // typeError: hey is not a function
 // };
 
-// * 인수 넘기기
+// // * 인수 넘기기
 
-function argument() {
-  console.log("hey.");
-}
+// function argument() {
+//   console.log("hey.");
+// }
 
 // 현재 logView 함수는 인수argument나 파라미터parameter를 받지 않고 있다.
 
@@ -48,8 +48,15 @@ function argument() {
 
 // 함수 이름 뒤의 괄호 안에 파라미터 이름을 추가해서 함수를 선언하면 된다.
 
-function argument2(name) {
-  console.log(`hey, ${name}.`);
+// function argument2(name) {
+//   console.log(`hey, ${name}.`);
+// }
+
+// argument2("park");
+
+function logDefault(name = "박준형", hobby = "음악") {
+  console.log(`${name}은 ${hobby}를(을) 좋아한다.`);
 }
 
-argument2("park");
+logDefault();
+//
