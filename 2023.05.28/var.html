@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #root {
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+      }
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      var root = document.getElementById("root");
+
+      for (var i = 0; i < 5; i++) {
+        box = document.createElement("div");
+        box.onclick = function () {
+          alert("this is box #" + i + "desu.");
+        };
+        root.appendChild(box);
+      }
+
+      // 이 반복문은 root 안에 5개의 div를 만든다.
+      // 각 div는 그 div의 인덱스(순서)를 경고창에 표시해주는 onclick 핸들러가 할당됐다.
+      // for문 안에서 i를 선언해도 글로벌 영역에 i가 생긴다.
+      // 그리고 i가 5가 될 때까지 for 루프를 돈다.
+      // 5개의 div 중 어느 것을 클릭하건 i의 값은 글로벌 변수 i에 있는 5이기 때문에
+      // 표시되는 인덱스는 모두 5로 표시된다.
+    </script>
+  </body>
+</html>
