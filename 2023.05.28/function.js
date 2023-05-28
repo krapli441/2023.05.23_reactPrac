@@ -54,9 +54,19 @@
 
 // argument2("park");
 
-function logDefault(name = "박준형", hobby = "음악") {
-  console.log(`${name}은 ${hobby}를(을) 좋아한다.`);
-}
+// function logDefault(name = "박준형", hobby = "음악") {
+//   console.log(`${name}은 ${hobby}를(을) 좋아한다.`);
+// }
 
-logDefault();
-//
+// logDefault();
+// //
+
+const myName = function (name) {
+  return `제 이름은 ${name}입니다.`;
+};
+
+console.log(myName("박준형")); // 제 이름은 박준형입니다.
+
+const myName2 = (name) => `제 이름은 ${name}입니다.`;
+
+console.log(myName2("박준형"));
