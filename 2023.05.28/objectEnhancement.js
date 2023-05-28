@@ -1,8 +1,11 @@
 const name = "탈락";
 const elevation = 9738;
 
-const mountain = { name, elevation };
+const print = function () {
+  console.log(`${this.name} 산의 높이는 ${this.elevation} 피트입니다.}`);
+};
 
-console.log(mountain); // name : "탈락", elevation : 9738
+const mountain = { name, elevation, print };
+console.log(mountain.print());
 
-// mountain 객체에는 name과 elevation이라는 필드가 들어가게 됐다.
+// 객체 리터럴 개선을 통해 객체 메서드를 생산하는 것도 가능하다.
