@@ -49,7 +49,7 @@
             { name: "토마토", amount: "2", measurement: "개" },
             { name: "또띠야", amount: "3", measurement: "개" },
           ],
-          stpes: [
+          steps: [
             "생선을 그릴에 익힘",
             "또띠야 3장 위에 생선을 얹음",
             "또띠아에 얹은 생선 위에 상추, 토마토, 치즈를 올림",
@@ -89,7 +89,7 @@
             </header>
             <div className="recipes">
               {recipes.map((recipe, i) => {
-                <Recipe key={i} {...recipe} />;
+                return <Recipe key={i} {...recipe} />;
               })}
             </div>
           </article>
