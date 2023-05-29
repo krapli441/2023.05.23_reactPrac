@@ -16,10 +16,31 @@
 
     <script>
       // 순수 리액트와 자바스크립트 코드
+      const root = document.getElementById("root");
+
       let dish = React.createElement("h1", { id: "recipe-0" }, "구운 연어");
+      let dessert = React.createElement(
+        "h2",
+        { id: " recipe-1" },
+        "파인애플 피자"
+      );
       // React.createElement를 이용하여 원소 생성
-      ReactDOM.render(dish, document.getElementById("root"));
+      ReactDOM.render([dish, dessert], root);
       // 생성한 원소를 render를 이용해 브라우저에 렌더링
+
+      let list = React.createElement(
+        "ul",
+        { id: "recipe-2" },
+        React.createElement("li", null, "연어 900그램"),
+        React.createElement("li", null, "신선한 로즈마리 5가지"),
+        React.createElement("li", null, "올리브 오일 2 테이블스푼"),
+        React.createElement("li", null, "작은 레몬 2조각"),
+        React.createElement("li", null, "코셔 소금 1 티스푼"),
+        React.createElement("li", null, "다진 마늘 4쪽")
+      );
+      // createElement에 대해 네 번째 이후 추가된 인자는 다른 자식의 원소로 취급된다.
+      // 리액트는 자식 원소의 배열을 만들고 props.children을 배열로 설정한다.
+      ReactDOM.render(list, root);
     </script>
   </body>
 </html>
