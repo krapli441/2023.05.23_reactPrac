@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 타겟 컨테이너 : 리액트가 들어갈 div -->
+    <div id="root"></div>
+
+    <!-- React와 ReactDOM 라이브러리 (개발 버전) -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel 라이브러리를 추가 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- 자바스크립트와 리액트 코드 -->
+    <script>
+      const root = document.getElementById("root");
+      const data = [
+        {
+          name: "구운 연어",
+          ingredients: [
+            { name: "연어", amount: "500", measurement: "그램" },
+            { name: "잣", amount: "1", measurement: "컵" },
+            { name: "버터 상추", amount: "2", measurement: "컵" },
+            { name: "옐로 스쿼시", amount: "1", measurement: "개" },
+            { name: "올리브 오일", amount: "0.5", measurement: "컵" },
+            { name: "마늘", amount: "3", measurement: "쪽" },
+          ],
+          steps: [
+            "오븐을 180도로 예열.",
+            "베이킹 그릇에 올리브 오일을 두름.",
+            "연어, 마늘, 잣을 그릇에 담음.",
+            "오븐에서 15분간 익힘",
+            "옐로 스쿼시를 넣고 다시 30분간 익힘",
+            "오븐에서 그릇을 꺼낸 뒤 15분간 식힌 다음 상추를 곁들여서 완성.",
+          ],
+        },
+        {
+          name: "생선 타코",
+          ingredients: [
+            { name: "흰살 생선", amount: "500", measurement: "그램" },
+            { name: "치즈", amount: "1", measurement: "컵" },
+            { name: "아이스버그 상추", amount: "2", measurement: "컵" },
+            { name: "토마토", amount: "2", measurement: "개" },
+            { name: "또띠야", amount: "3", measurement: "개" },
+          ],
+          stpes: [
+            "생선을 그릴에 익힘",
+            "또띠야 3장 위에 생선을 얹음",
+            "또띠아에 얹은 생선 위에 상추, 토마토, 치즈를 올림",
+          ],
+        },
+      ];
+      // 자바스크립트 객체가 2개 포함된 배열이다.
+      // 각 객체에는 조리법의 이름, 필요한 재료, 그리고 조리 절차가 들어 있다.
+    </script>
+
+    <!-- JSX 코드를 여기 넣거나 별도의 자바스크립트 파일의 링크를 이 곳에 넣는다. -->
+    <script type="text/babel">
+      function Recipe({ name, ingredients, steps }) {
+        return (
+          <section id={name.toLowerCase().replace(/ /g, "-")}>
+            <h1>{name}</h1>
+            <ul className="ingredients">
+              {ingredients.map((ingredient, i) => {
+                <li key={i}>{ingredient.name}</li>;
+              })}
+            </ul>
+            <section className="instructions">
+              <h2>조리 절차</h2>
+              {steps.map((steps, i) => {
+                <p key={i}>{step}</p>;
+              })}
+            </section>
+          </section>
+        );
+      }
+
+      function Menu({ title, recipes }) {
+        return (
+          <article>
+            <header>
+              <h1>{title}</h1>
+            </header>
+            <div className="recipes">
+              {recipes.map((recipe, i) => {
+                <Recipe key={i} {...recipe} />;
+              })}
+            </div>
+          </article>
+        );
+      }
+
+      ReactDOM.render(<Menu recipes={data} title="음식 조리법" />, root);
+    </script>
+  </body>
+</html>
