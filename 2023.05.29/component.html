@@ -16,27 +16,38 @@
 
     <!-- 자바스크립트와 리액트 코드 -->
     <script>
+      const root = document.getElementById("root");
+
+      const ingredients = [
+        "재료 1",
+        "재료 2",
+        "재료 3",
+        "재료 4",
+        "재료 5",
+        "재료 6",
+        "재료 7",
+        "재료 8",
+        "재료 9",
+      ];
+
       function IngredientsList() {
         return React.createElement(
           "ul",
           { className: "ingredients" },
-          React.createElement("li", null, "재료 1"),
-          React.createElement("li", null, "재료 2"),
-          React.createElement("li", null, "재료 3"),
-          React.createElement("li", null, "재료 4"),
-          React.createElement("li", null, "재료 5"),
-          React.createElement("li", null, "재료 6"),
-          React.createElement("li", null, "재료 7"),
-          React.createElement("li", null, "재료 8"),
-          React.createElement("li", null, "재료 9")
+          ingredients.map((ingredients, i) => {
+            return React.createElement("li", { key: i }, ingredients);
+          })
         );
       }
-      // 데이터를 컴포넌트 안에 하드코딩을 했다는 문제점이 있다.
+      // IngredientsList 컴포넌트는 ingredients 아이템을 map() 메서드를 이용해
+      // 배열에 있는 모든 내용에 대해 li를 만들게 한다.
 
       ReactDOM.render(
-        React.createElement(IngredientsList, null, null),
-        document.getElementById("root")
+        React.createElement(IngredientsList, { items: ingredients }, null),
+        root
       );
+
+      // 
     </script>
   </body>
 </html>
