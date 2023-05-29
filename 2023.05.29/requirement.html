@@ -16,6 +16,10 @@
 
     <script>
       // 순수 리액트와 자바스크립트 코드
+      let dish = React.createElement("h1", { id: "recipe-0" }, "구운 연어");
+      // React.createElement를 이용하여 원소 생성
+      ReactDOM.render(dish, document.getElementById("root"));
+      // 생성한 원소를 render를 이용해 브라우저에 렌더링
     </script>
   </body>
 </html>
