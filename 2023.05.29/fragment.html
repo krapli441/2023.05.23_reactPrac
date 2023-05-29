@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 타겟 컨테이너 : 리액트가 들어갈 div -->
+    <div id="root"></div>
+
+    <!-- React와 ReactDOM 라이브러리 (개발 버전) -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+      // 순수 리액트와 자바스크립트 코드
+      const root = document.getElementById("root");
+    </script>
+    <script type="text/babel">
+      // function Cat({ name }) {
+      //   return <h1>괭이 이름은 {name}다옹</h1>;
+      // }
+      // // 만약 위 함수에 <p>이 괭이는 귀엽다옹</p> 과 같은 형제 원소를 추가하려고 하면
+      // // 구문 오류가 발생한다.
+      // // 리액트는 둘 이상의 인접한 형제 원소를 컴포넌트로 렌더링하지 않기 때문에
+      // // 만약 그렇게 하려면 div와 같은 태그로 감싸줘야 한다.
+      // // 그렇게 할 경우, 불필요한 태그가 만들어지기 때문에
+      // // React.Fragment를 이용한다면 실제 태그를 작성하지 않고
+      // // div 태그를 감싸주는 행동을 흉내낼 수 있다.
+
+      function Cat({ name }) {
+        return (
+          <React.Fragment>
+            <h1>괭이 이름은 {name}다옹</h1>
+            <p>이 괭이는 귀엽다옹</p>
+          </React.Fragment>
+        );
+      }
+
+      function Cat2({ name }) {
+        return (
+          <>
+            <h1>괭이 이름은 {name}다옹</h1>
+            <p>이 괭이는 더 짧아졌다옹</p>
+          </>
+        );
+      }
+      // 프래그먼트를 단축한 태그를 사용하여 코드를 더 깔끔하게 작성할 수 있다.
+
+      ReactDOM.render(<Cat name="애옹이" />, root);
+      ReactDOM.render(<Cat2 name="애옹이" />, root);
+    </script>
+  </body>
+</html>
