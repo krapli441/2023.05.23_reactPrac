@@ -1,20 +1,15 @@
 import React from "react";
+import IngredientsList from "./IngredientList.js";
+import Instructions from "./Instructions.js";
 
-export default function Recipe({ name, ingredients, steps }) {
+function Recipe({ name, ingredients, steps }) {
   return (
-    <section>
+    <section id={name.toLowerCase().replace(/ /g, "-")}>
       <h1>{name}</h1>
-      <ul className="ingredients">
-        {ingredients.map((ingredients, i) => {
-          return <li key={i}>{ingredients.name}</li>;
-        })}
-      </ul>
-      <section className="instuctions">
-        <h2>how to cook</h2>
-        {steps.map((step, i) => {
-          return <p key={i}>{step}</p>;
-        })}
-      </section>
+      <IngredientsList list={ingredients} />
+      <Instructions title="how to cook" steps={step} />
     </section>
   );
 }
+
+export default Recipe;
