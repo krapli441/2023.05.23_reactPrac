@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 타겟 컨테이너 : 리액트가 들어갈 div -->
+    <div id="root"></div>
+
+    <!-- React와 ReactDOM 라이브러리 (개발 버전) -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- 자바스크립트와 리액트 코드 -->
+    <script>
+      function IngredientsList() {
+        return React.createElement(
+          "ul",
+          { className: "ingredients" },
+          React.createElement("li", null, "재료 1"),
+          React.createElement("li", null, "재료 2"),
+          React.createElement("li", null, "재료 3"),
+          React.createElement("li", null, "재료 4"),
+          React.createElement("li", null, "재료 5"),
+          React.createElement("li", null, "재료 6"),
+          React.createElement("li", null, "재료 7"),
+          React.createElement("li", null, "재료 8"),
+          React.createElement("li", null, "재료 9")
+        );
+      }
+      // 데이터를 컴포넌트 안에 하드코딩을 했다는 문제점이 있다.
+
+      ReactDOM.render(
+        React.createElement(IngredientsList, null, null),
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
