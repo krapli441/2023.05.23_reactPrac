@@ -9,19 +9,23 @@ import { FaStar } from "react-icons/fa/index.esm.js";
 // // selected 프로퍼티가 컴포넌트에 전달되지 않으면
 // // 별이 선택되지 않았다고 가정하고, 디폴트 색인 회색으로 칠한다.
 
-const Star = ({ selected = false, onsSelect = (f) => f }) => {
-  return <FaStar color={selected ? "red" : "grey"} onCilck={onSelect} />;
+const Star = ({ selected = false, onSelect = (f) => f }) => {
+  return <FaStar color={selected ? "red" : "grey"} onClick={onSelect} />;
 };
 
 const createArray = (length) => [...Array(length)];
 
 export default function StarRating({ totalStars = 10 }) {
-  const [selectedStars] = useState(8);
+  const [selectedStars, setSelectedStars] = useState(0);
   return (
     <>
-      {createArray(totalStars).map((n, i) => {
-        return <Star key={i} selected={selectedStars > i} />;
-      })}
+      {createArray(totalStars).map((n, i) => (
+        <Star
+          key={i}
+          selected={selectedStars > i}
+          onSelect={() => setSelectedStars(i + 1)}
+        />
+      ))}
       <p>
         {selectedStars} / {totalStars}
       </p>
