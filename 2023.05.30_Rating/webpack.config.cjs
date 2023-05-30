@@ -10,6 +10,9 @@ module.exports = {
   module: {
     rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }],
   },
+  resolve: {
+    extensions: [".js", "jsx"],
+  },
 };
 
 // rules 필드는 웹팩에 사용할 여러가지 유형의 로더를 포함해야 하기 때문에 배열로 작성한다.
