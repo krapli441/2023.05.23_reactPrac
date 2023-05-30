@@ -9,10 +9,17 @@ module.exports = {
   },
   module: {
     rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }],
+    // rules 필드는 웹팩에 사용할 여러가지 유형의 로더를 포함해야 하기 때문에 배열로 작성한다.
   },
   resolve: {
-    extensions: [".js", "jsx"],
+    extensions: [".js", ".jsx"],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    hot: true,
+    // Webpack Dev Server의 최신 버전에서는
+    //contentBase 대신 static 속성을 사용해야 한다.
   },
 };
-
-// rules 필드는 웹팩에 사용할 여러가지 유형의 로더를 포함해야 하기 때문에 배열로 작성한다.
