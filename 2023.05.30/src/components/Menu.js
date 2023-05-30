@@ -8,8 +8,8 @@ function Menu({ recipes }) {
         <h1>how to coooook</h1>
       </header>
       <div className="recipes">
-        {recipes.map((reipe, i) => {
-          return <Recipe key={i} {...Recipe} />;
+        {recipes.map((recipe, i) => {
+          return <Recipe key={i} {...recipe} />;
         })}
       </div>
     </article>
