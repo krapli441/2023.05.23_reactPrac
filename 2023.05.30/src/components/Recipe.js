@@ -1,5 +1,5 @@
-import react from "react";
-import Ingredient from "./Ingredients";
+import React from "react";
+import IngredientsList from "./IngredientsList";
 import Instructions from "./Instructions";
 
 function Recipe({ name, ingredients, steps }) {

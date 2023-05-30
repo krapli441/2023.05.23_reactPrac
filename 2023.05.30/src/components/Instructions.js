@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 export default function Instructions({ title, steps }) {
   return (
@@ -10,3 +10,5 @@ export default function Instructions({ title, steps }) {
     </secetion>
   );
 }
+
+// 절차의 제목과 단계를 인자로 받는다.
