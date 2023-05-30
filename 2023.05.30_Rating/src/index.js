@@ -9,6 +9,7 @@ render(
     </header>
     <div className="rating">
       <StarRating />
+      <Star />
     </div>
   </article>,
   document.getElementById("root")

@@ -10,3 +10,7 @@ export default function StarRating() {
     <FaStar color="grey" />,
   ];
 }
+
+const Star = ({ selected = false }) => (
+  <FaStar color={selected ? "red" : "grey"} />
+);
