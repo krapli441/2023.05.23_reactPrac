@@ -1,6 +1,6 @@
 import React from "react";
 
-import Ingredient from "./Ingredients";
+import Ingredient from "./Ingredients.js";
 
 export default function IngredientsList({ list }) {
   return (
