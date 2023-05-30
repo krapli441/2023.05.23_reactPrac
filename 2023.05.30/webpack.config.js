@@ -1,4 +1,4 @@
-import path from "path";
+let path = require("path");
 
 module.exports = {
   entry: "./src/index.js", // 클라이언트의 시작 파일 (엔트리 포인트)를 설정해준다.
