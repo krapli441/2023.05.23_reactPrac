@@ -8,7 +8,7 @@ module.exports = {
     // 번들을 dist/bundle.js 라는 자바스크립트 파일에 출력하라고 지정했다.
   },
   module: {
-    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }],
+    rules: [{ test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader" }],
     // rules 필드는 웹팩에 사용할 여러가지 유형의 로더를 포함해야 하기 때문에 배열로 작성한다.
   },
   resolve: {

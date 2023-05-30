@@ -7,7 +7,7 @@
       <header>
         <h1>별점</h1>
       </header>
-      <div className="ratinggg">
+      <div className="rating">
         <StarRating />
       </div>
     </article>,
