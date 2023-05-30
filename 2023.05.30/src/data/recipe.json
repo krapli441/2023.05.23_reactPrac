@@ -2,12 +2,12 @@
   {
     "name": "구운 연어",
     "ingredients": [
-      { "name": "언어", "amout": 500, "measurement": "그램" },
-      { "name": "잣", "amout": 1, "measurement": "컵" },
-      { "name": "버터 상추", "amout": 2, "measurement": "컵" },
-      { "name": "옐로 스쿼시", "amout": 1, "measurement": "개" },
-      { "name": "올리브 오일 ", "amout": 0.5, "measurement": "컵" },
-      { "name": "마늘", "amout": 3, "measurement": "쪽" }
+      { "name": "언어", "amount": 500, "measurement": "그램" },
+      { "name": "잣", "amount": 1, "measurement": "컵" },
+      { "name": "버터 상추", "amount": 2, "measurement": "컵" },
+      { "name": "옐로 스쿼시", "amount": 1, "measurement": "개" },
+      { "name": "올리브 오일 ", "amount": 0.5, "measurement": "컵" },
+      { "name": "마늘", "amount": 3, "measurement": "쪽" }
     ],
     "steps": [
       "오븐을 350도로 예열함.",
@@ -18,13 +18,13 @@
     ]
   },
   {
-    "name": "생선 타고",
+    "name": "생선 타코",
     "ingredients": [
-      { "name": "흰 살 생선", "amout": 500, "measurement": "그램" },
-      { "name": "치즈", "amout": 1, "measurement": "컵" },
-      { "name": "아이스버그 상추", "amout": 2, "measurement": "컵" },
-      { "name": "토마토", "amout": 2, "measurement": "개" },
-      { "name": "또띠야", "amout": 3, "measurement": "개" }
+      { "name": "흰 살 생선", "amount": 500, "measurement": "그램" },
+      { "name": "치즈", "amount": 1, "measurement": "컵" },
+      { "name": "아이스버그 상추", "amount": 2, "measurement": "컵" },
+      { "name": "토마토", "amount": 2, "measurement": "개" },
+      { "name": "또띠야", "amount": 3, "measurement": "개" }
     ],
     "steps": [
       "생선을 그릴에 익힌다",
