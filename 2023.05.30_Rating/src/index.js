@@ -1,5 +1,5 @@
 import React from "react";
-
+import { render } from "react-dom";
 import StarRating from "./components/Rating.js";
 
 render(
@@ -10,5 +10,6 @@ render(
     <div className="rating">
       <StarRating />
     </div>
-  </article>
+  </article>,
+  document.getElementById("root")
 );
