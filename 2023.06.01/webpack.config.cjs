@@ -1,4 +1,5 @@
 let path = require("path");
+const { Extension } = require("typescript");
 
 module.exports = {
   entry: {
@@ -17,9 +18,10 @@ module.exports = {
         test: [/\.js$/, /\.jsx$/],
         use: ["babel-loader"],
       },
-      { test: [/\.ts$/, /\.tsx$/], use: ["ts-loader"] },
+      { test: [/\.ts$/, /\.tsx$/], use: ["babel-loader", "ts-loader"] },
     ],
   },
+  resolve: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
   devServer: {
     historyApiFallback: true,
     port: 8080,

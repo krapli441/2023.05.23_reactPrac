@@ -1,3 +1,3 @@
-export default function devide(a: number, b: number) {
+export default function divide(a: number, b: number) {
   return a / b;
 }
