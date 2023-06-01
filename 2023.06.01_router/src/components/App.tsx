@@ -1,11 +1,15 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Screen from "./Screen";
+import Second from "./Second";
 
-export default function App () {
+export default function App() {
   return (
     <>
-    <div className="container">
-      <h1>히히 앱 컨테이너</h1>
-    </div>
+      <Routes>
+        <Route path="/" element={<Screen />} />
+        <Route path="/Second" element={<Second />} />
+      </Routes>
     </>
-  )
-}
+  );
+};

@@ -6,8 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 // ? 컴포넌트
 import App from "./components/App";
 
-
-
 const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(
 <BrowserRouter>
